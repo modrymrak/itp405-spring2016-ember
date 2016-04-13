@@ -1,0 +1,14 @@
+<div class = "col-md-2">
+  <h2>List of Artists</h2>
+  <ul class="nav nav-pills nav-stacked">
+    {{#each model.artists as |artist|}}
+       <li role="presentation">
+        {{#link-to 'artists.artist' artist.id}}
+          {{artist.artistName}}
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
+</div>
+
+{{outlet}}
